@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>FlightClub API documentation &mdash; FlightClub Documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="FlightClub Documentation" href="#" />
+    <link rel="next" title="LaunchSites" href="LaunchSites.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="flightclub-api-documentation">
+<h1>FlightClub API documentation<a class="headerlink" href="#flightclub-api-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="LaunchSites.html">LaunchSites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaunchVehicles.html">LaunchVehicles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Missions.html">Missions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Payloads.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Simulator.html">Simulator</a></li>
+</ul>
+</div>
+<p>All requests to the FlightClub API must be sent to the endpoint root</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">http://www.decmurphy.com:8080/FlightClub/api/{VERSION}/</span></code></div></blockquote>
+<p>and all requests to the FlightSchool test server must be sent to</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">http://www.decmurphy.com:8080/FlightSchool/api/{VERSION}/</span></code></div></blockquote>
+<p>Currently, the API is only active on the test server, and the only active version
+is &#8216;v1&#8217;. The dedicated pages for each method provide example requests, responses
+and any other nuances you need to know.</p>
+<p>Querying the root endpoint returns an API &#8216;Table of Contents&#8217;, which you can
+traverse without the need for this documentation:</p>
+<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;version&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;launchsites&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.decmurphy.com:8080/FlightSchool/api/v1/launchsites/&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;launchvehicles&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.decmurphy.com:8080/FlightSchool/api/v1/launchvehicles/&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;payloads&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.decmurphy.com:8080/FlightSchool/api/v1/payloads/&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;missions&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.decmurphy.com:8080/FlightSchool/api/v1/missions/&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.decmurphy.com:8080/FlightSchool/api/v1/&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Good luck!</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="LaunchSites.html" title="next chapter">LaunchSites</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Declan Murphy.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
