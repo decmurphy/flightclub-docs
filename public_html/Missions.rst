@@ -20,39 +20,51 @@ Response
     "data": [
       {
         "id": 1,
+        "launchsite": "OMLK",
         "description": "FalconSAT-2",
+        "launchvehicle": "F1A",
+        "payload": "SATL",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/missions/1/"
+          "self": "http://localhost:8080/FlightClub/api/v1/missions/1/"
         },
         "code": "FSAT"
       },
       {
         "id": 2,
+        "launchsite": "OMLK",
         "description": "DemoSat",
+        "launchvehicle": "F1A",
+        "payload": "SATL",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/missions/2/"
+          "self": "http://localhost:8080/FlightClub/api/v1/missions/2/"
         },
         "code": "DEMO"
       },
       {
-        "id": 26,
-        "description": "Jason-3",
+        "id": 30,
+        "launchsite": "LC40",
+        "description": "Orbcomm OG2 Mission 2",
+        "launchvehicle": "F92",
+        "payload": "SATL",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/missions/26/"
+          "self": "http://localhost:8080/FlightClub/api/v1/missions/30/"
         },
-        "code": "JSN3"
+        "code": "OG22"
       },
       {
-        "id": 28,
-        "description": "SES-9",
+        "id": 26,
+        "launchsite": "LC4E",
+        "description": "Jason-3",
+        "launchvehicle": "F91",
+        "payload": "SATL",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/missions/28/"
+          "self": "http://localhost:8080/FlightClub/api/v1/missions/26/"
         },
-        "code": "SES9"
+        "code": "JSN3"
       }
     ],
     "links": {
-      "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/missions/"
+      "self": "http://localhost:8080/FlightClub/api/v1/missions/"
     }
   }
 
@@ -76,59 +88,57 @@ Response
   {
     "Mission": {
       "code": "CRS7",
-      "launchvehicle": "F91",
+      "description": "CRS-7",
+      "date": "2015-06-28",
+      "time": "14:21:11",
       "launchsite": "LC40",
-      "dateTime": "2015-06-28T14:21:11.000-04:00",
+      "launchvehicle": "F91",
       "Profile": {
         "Payload": {
-          "mass": 6678,
-          "code": "DRG1"
+          "code": "DRG1",
+          "mass": "6678"
         },
         "Stages": [
           {
             "Core": {
-              "id": 0,
-              "legs": true
+              "id": "0",
+              "legs": "true"
             },
-            "release": 0,
+            "release": "0",
             "PitchKick": {
-              "start": 7,
-              "pitch": 2.35,
-              "yaw": 47
+              "start": "7",
+              "pitch": "2.35",
+              "yaw": "47"
             },
             "Burns": [
               {
                 "tag": "init",
-                "start": -2,
-                "end": 160,
-                "engines": 9,
-                "throttle": 1
+                "engines": "9",
+                "start": "-2",
+                "end": "160"
               },
               {
                 "tag": "boost",
-                "start": 220,
-                "end": 230,
-                "engines": 3,
-                "throttle": 1
+                "engines": "3",
+                "start": "220",
+                "end": "230"
               },
               {
                 "tag": "entry",
-                "start": 380,
-                "end": 440,
-                "engines": 1,
-                "throttle": 1
+                "engines": "1",
+                "start": "380",
+                "end": "440"
               },
               {
                 "tag": "landing",
-                "start": 460,
-                "engines": 1,
-                "throttle": 1
+                "engines": "1",
+                "start": "460"
               }
             ],
             "Course": [
               {
                 "tag": "gravturn",
-                "start": 55,
+                "start": "55",
                 "Attitude": {
                   "gt": "fgt"
                 }
@@ -136,7 +146,7 @@ Response
               {
                 "tag": "boost",
                 "Attitude": {
-                  "pitch": -28.5
+                  "pitch": "-28.5"
                 }
               },
               {
@@ -155,24 +165,23 @@ Response
           },
           {
             "Core": {
-              "id": 1,
-              "legs": false
+              "id": "1",
+              "legs": "false"
             },
-            "release": 162,
+            "release": "162",
             "Burns": [
               {
                 "tag": "init",
-                "start": 165,
-                "engines": 1,
-                "throttle": 1
+                "engines": "1",
+                "start": "165"
               }
             ],
             "Course": [
               {
                 "tag": "guidance-1",
-                "start": 340,
+                "start": "340",
                 "Attitude": {
-                  "pitch": 0
+                  "pitch": "0"
                 }
               }
             ]
@@ -189,6 +198,8 @@ Response Overview
 | Element   | Attribute     | Explanation                                        |
 +-----------+---------------+----------------------------------------------------+
 | Mission   | code          || ``code`` from ``missions/``                       |
+|           +---------------+----------------------------------------------------+
+|           | description   || Plain text mission name                           |
 |           +---------------+----------------------------------------------------+
 |           | launchvehicle || ``code`` from ``launchvehicles/``                 |
 |           +---------------+----------------------------------------------------+

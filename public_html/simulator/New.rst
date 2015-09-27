@@ -27,7 +27,7 @@ Response
         "Burn occurring before Release for stage 0"
       ],
       "success": true,
-      "url": "http://www.decmurphy.com:8080/FlightClub/api/v1/simulator/results?id=774520b1-3c1b-4c08-8953-fb11f79af50d&pl=JSN3"
+      "output": "http://www.decmurphy.com:8080/FlightClub/api/v1/simulator/results?id=774520b1-3c1b-4c08-8953-fb11f79af50d&pl=JSN3"
     }
   }
 
@@ -39,5 +39,5 @@ Response Overview
 +---------+-----------+----------------------------------------------+
 | Mission | success   | Success flag (boolean)                       |
 |         +-----------+----------------------------------------------+
-|         | url       | API ``GET`` method for output images/files   |
+|         | output    | API ``GET`` method for output images/files   |
 +---------+-----------+----------------------------------------------+

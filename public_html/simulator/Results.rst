@@ -12,18 +12,21 @@ Response
 .. code-block:: json
 
   {
-    "Output": {
-      "Files": [],
-      "Images": [
-        {
-          "desc": "globe",
-          "url": "/FlightClub/output/eaca5b7d-5ed7-4707-aac7-cd8095db629e_globe.png"
-        },
-        {
-          "desc": "ground-track",
-          "url": "/FlightClub/output/eaca5b7d-5ed7-4707-aac7-cd8095db629e_ground-track.png"
-        }
-      ]
+    "Mission": {
+      "desc": "Jason-3",
+      "Output": {
+        "Files": [],
+        "Images": [
+          {
+            "desc": "globe",
+            "url": "http://localhost:8080/FlightClub/output/774520b1-3c1b-4c08-8953-fb11f79af50d_globe.png"
+          },
+          {
+            "desc": "ground-track",
+            "url": "http://localhost:8080/FlightClub/output/774520b1-3c1b-4c08-8953-fb11f79af50d_ground-track.png"
+          }
+        ]
+      }
     }
   }
 
@@ -32,6 +35,10 @@ Response Overview
   
 +------------------+------------+-------------------------------------------------+
 | Element          | Attribute  | Explanation                                     |
++------------------+------------+-------------------------------------------------+
+| Mission          | desc       | Plain text mission name                         |
+|                  +------------+-------------------------------------------------+
+|                  | **Output** | Collection of output images                     |
 +------------------+------------+-------------------------------------------------+
 | Output           | **Files**  | Array of output files and their paths           |
 |                  +------------+-------------------------------------------------+
