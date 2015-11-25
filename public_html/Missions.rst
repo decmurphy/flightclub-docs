@@ -9,7 +9,7 @@ into the children.
 HTTP Method
 ===========
 
-``GET http://www.decmurphy.com:8080/FlightClub/api/v1/missions/``
+``GET http://www.flightclub.io:8080/FlightClub/api/v1/missions/``
 
 Response
 ========
@@ -74,11 +74,11 @@ Since the child response is pretty huge, we'll dissect it here. Let's take CRS-7
 HTTP Method
 ===========
 
-``GET http://www.decmurphy.com:8080/FlightClub/api/v1/missions/27/``
+``GET http://www.flightclub.io:8080/FlightClub/api/v1/missions/27/``
 
 OR
 
-``GET http://www.decmurphy.com:8080/FlightClub/api/v1/missions/CRS7/``
+``GET http://www.flightclub.io:8080/FlightClub/api/v1/missions/CRS7/``
 
 Response
 ========

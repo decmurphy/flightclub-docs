@@ -14,11 +14,11 @@ Contents:
 
 All requests to the FlightClub API must be sent to the endpoint root
 
-    ``http://www.decmurphy.com:8080/FlightClub/api/{VERSION}/``
+    ``http://www.flightclub.io:8080/FlightClub/api/{VERSION}/``
     
 and all requests to the FlightSchool test server must be sent to
     
-    ``http://www.decmurphy.com:8080/FlightSchool/api/{VERSION}/``
+    ``http://www.flightclub.io:8080/FlightSchool/api/{VERSION}/``
     
 Currently, the API is only active on the test server, and the only active version 
 is 'v1'. The dedicated pages for each method provide example requests, responses 
@@ -35,15 +35,15 @@ traverse without the need for this documentation:
         "type": "version",
         "id": "1",
         "links": {
-          "launchsites": "http://www.decmurphy.com:8080/FlightSchool/api/v1/launchsites/",
-          "launchvehicles": "http://www.decmurphy.com:8080/FlightSchool/api/v1/launchvehicles/",
-          "payloads": "http://www.decmurphy.com:8080/FlightSchool/api/v1/payloads/",
-          "missions": "http://www.decmurphy.com:8080/FlightSchool/api/v1/missions/"
+          "launchsites": "http://www.flightclub.io:8080/FlightClub/api/v1/launchsites/",
+          "launchvehicles": "http://www.flightclub.io:8080/FlightClub/api/v1/launchvehicles/",
+          "payloads": "http://www.flightclub.io:8080/FlightClub/api/v1/payloads/",
+          "missions": "http://www.flightclub.io:8080/FlightClub/api/v1/missions/"
         }
       }
     ],
     "links": {
-      "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/"
+      "self": "http://www.flightclub.io:8080/FlightClub/api/v1/"
     }
   }
 

@@ -4,7 +4,7 @@ LaunchVehicles
 HTTP Method
 ===========
 
-``GET http://www.decmurphy.com:8080/FlightClub/api/v1/launchvehicles/``
+``GET http://www.flightclub.io:8080/FlightClub/api/v1/launchvehicles/``
 
 Response
 ========
@@ -18,7 +18,7 @@ Response
         "code": "F1A",
         "description": "Falcon 1 (Merlin 1A)",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/launchvehicles/1/"
+          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchvehicles/1/"
         }
       },
       {
@@ -26,7 +26,7 @@ Response
         "code": "F1C",
         "description": "Falcon 1 (Merlin 1C)",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/launchvehicles/2/"
+          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchvehicles/2/"
         }
       },
       {
@@ -34,7 +34,7 @@ Response
         "code": "FN9",
         "description": "Falcon 9v1.0",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/launchvehicles/3/"
+          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchvehicles/3/"
         }
       },
       {
@@ -42,7 +42,7 @@ Response
         "code": "F91",
         "description": "Falcon 9v1.1",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/launchvehicles/4/"
+          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchvehicles/4/"
         }
       },
       {
@@ -50,7 +50,7 @@ Response
         "code": "F92",
         "description": "Falcon 9v1.2",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/launchvehicles/5/"
+          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchvehicles/5/"
         }
       },
       {
@@ -58,12 +58,12 @@ Response
         "code": "FNH",
         "description": "Falcon Heavy",
         "links": {
-          "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/launchvehicles/6/"
+          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchvehicles/6/"
         }
       }
     ],
     "links": {
-      "self": "http://www.decmurphy.com:8080/FlightSchool/api/v1/launchvehicles/"
+      "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchvehicles/"
     }
   }
   
