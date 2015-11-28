@@ -20,8 +20,8 @@ and all requests to the FlightSchool test server must be sent to
     
     ``http://www.flightclub.io:8080/FlightSchool/api/{VERSION}/``
     
-Currently, the API is only active on the test server, and the only active version 
-is 'v1'. The dedicated pages for each method provide example requests, responses 
+Currently, the only active API version is 'v1'. 
+The dedicated pages for each method provide example requests, responses 
 and any other nuances you need to know.
 
 Querying the root endpoint returns an API 'Table of Contents', which you can
