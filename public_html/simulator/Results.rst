@@ -4,7 +4,7 @@ Simulation Results
 HTTP Method
 ===========
 
-``GET http://www.flightclub.io:8080/FlightClub/api/v1/simulator/results?id=774520b1-3c1b-4c08-8953-fb11f79af50d&pl=JSN3``
+``GET http://www.flightclub.io:8080/FlightClub/api/v1/simulator/results?id=774520b1-3c1b-4c08-8953-fb11f79af50d&code=JSN3``
 
 Response
 ========
