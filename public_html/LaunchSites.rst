@@ -4,7 +4,7 @@ LaunchSites
 HTTP Method
 ===========
 
-``GET http://www.flightclub.io:8080/FlightClub/api/v1/launchsites/``
+``GET https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/``
 
 Response
 ========
@@ -18,7 +18,7 @@ Response
         "code": "OMLK",
         "description": "Omelek Island, Kwajalein Atoll",
         "links": {
-          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchsites/1/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/1/"
         }
       },
       {
@@ -26,7 +26,7 @@ Response
         "code": "LC40",
         "description": "CCAFS SLC-40",
         "links": {
-          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchsites/2/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/2/"
         }
       },
       {
@@ -34,7 +34,7 @@ Response
         "code": "LC4E",
         "description": "Vandenburg SLC-4E",
         "links": {
-          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchsites/3/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/3/"
         }
       },
       {
@@ -42,7 +42,7 @@ Response
         "code": "K39A",
         "description": "KSC 39-A",
         "links": {
-          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchsites/4/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/4/"
         }
       },
       {
@@ -50,7 +50,7 @@ Response
         "code": "BOCA",
         "description": "Boca Chica, Texas",
         "links": {
-          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchsites/5/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/5/"
         }
       },
       {
@@ -58,12 +58,12 @@ Response
         "code": "EQTR",
         "description": "Equatorial Launch Site",
         "links": {
-          "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchsites/6/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/6/"
         }
       }
     ],
     "links": {
-      "self": "http://www.flightclub.io:8080/FlightClub/api/v1/launchsites/"
+      "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/"
     }
   }
   

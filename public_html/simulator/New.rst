@@ -4,7 +4,7 @@ New Simulation
 HTTP Method
 ===========
 
-``POST http://www.flightclub.io:8080/FlightClub/api/v1/simulator/new/``
+``POST https://www.flightclub.io:8443/FlightClub/api/v1/simulator/new/``
 
 This method must include the following headers:
 
@@ -27,7 +27,7 @@ Response
         "Burn occurring before Release for stage 0"
       ],
       "success": true,
-      "output": "http://www.flightclub.io:8080/FlightClub/api/v1/simulator/results?id=774520b1-3c1b-4c08-8953-fb11f79af50d&code=JSN3"
+      "output": "https://www.flightclub.io:8443/FlightClub/api/v1/simulator/results?id=774520b1-3c1b-4c08-8953-fb11f79af50d&code=JSN3"
     }
   }
 
