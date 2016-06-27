@@ -4,7 +4,7 @@ Simulation Results
 HTTP Method
 ===========
 
-``GET https://www.flightclub.io:8443/FlightClub/api/v1/simulator/results?id=774520b1-3c1b-4c08-8953-fb11f79af50d&code=JSN3``
+``GET https://www.flightclub.io:8443/FlightClub/api/v1/simulator/results/?id=972a55e9-67a1-40e2-885e-f35968abbcbd&code=CRS9``
 
 Response
 ========
@@ -13,17 +13,16 @@ Response
 
   {
     "Mission": {
-      "desc": "Jason-3",
+      "desc": "CRS-9",
       "Output": {
-        "Files": [],
-        "Images": [
+        "Files": [
           {
-            "desc": "globe",
-            "url": "http://localhost:8080/FlightClub/output/774520b1-3c1b-4c08-8953-fb11f79af50d_globe.png"
+            "desc": "telemetry",
+            "url": "/output/972a55e9-67a1-40e2-885e-f35968abbcbd_telemetry"
           },
           {
-            "desc": "ground-track",
-            "url": "http://localhost:8080/FlightClub/output/774520b1-3c1b-4c08-8953-fb11f79af50d_ground-track.png"
+            "desc": "warnings",
+            "url": "/output/972a55e9-67a1-40e2-885e-f35968abbcbd_warnings"
           }
         ]
       }
@@ -41,14 +40,8 @@ Response Overview
 |                  | **Output** | Collection of output images                     |
 +------------------+------------+-------------------------------------------------+
 | Output           | **Files**  | Array of output files and their paths           |
-|                  +------------+-------------------------------------------------+
-|                  | **Images** | Array of some output graphs and their paths     |
 +------------------+------------+-------------------------------------------------+
 | Files            | desc       | Plain text description of data file             |
 |                  +------------+-------------------------------------------------+
 |                  | url        | API ``GET`` path to data file                   |
-+------------------+------------+-------------------------------------------------+
-| Images           | desc       | Plain text description of image                 |
-|                  +------------+-------------------------------------------------+
-|                  | url        | API ``GET`` path to image                       |
 +------------------+------------+-------------------------------------------------+

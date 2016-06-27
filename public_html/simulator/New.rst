@@ -37,7 +37,13 @@ Response Overview
 +---------+-----------+----------------------------------------------+
 | Element | Attribute | Explanation                                  |
 +---------+-----------+----------------------------------------------+
-| Mission | success   | Success flag (boolean)                       |
+| Mission | errors    | Any errors which made the sim impossible to  |
+|         |           | run.                                         |
+|         +-----------+----------------------------------------------+
+|         | warnings  | A sim can still be run with warnings, but    |
+|         |           | results might not be complete                |
+|         +-----------+----------------------------------------------+
+|         | success   | Success flag (boolean)                       |
 |         +-----------+----------------------------------------------+
 |         | output    | API ``GET`` method for output images/files   |
 +---------+-----------+----------------------------------------------+

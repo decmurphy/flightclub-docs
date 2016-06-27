@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'FlightClub'
-copyright = u'2015, Declan Murphy'
+copyright = u'2016, Declan Murphy'
 author = u'Declan Murphy'
 
 # The version info for the project you're documenting, acts as replacement for

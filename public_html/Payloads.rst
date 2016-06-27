@@ -14,28 +14,12 @@ Response
   {
     "data": [
       {
-        "id": 1,
-        "description": "Dragon 1",
-        "links": {
-          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/payloads/1/"
-        },
-        "code": "DRG1"
-      },
-      {
-        "id": 2,
-        "description": "Dragon 2",
-        "links": {
-          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/payloads/2/"
-        },
-        "code": "DRG2"
-      },
-      {
         "id": 3,
+        "code": "SATL",
         "description": "Satellite",
         "links": {
           "self": "https://www.flightclub.io:8443/FlightClub/api/v1/payloads/3/"
-        },
-        "code": "SATL"
+        }
       }
     ],
     "links": {

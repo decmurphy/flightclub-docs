@@ -6,6 +6,7 @@ Contents:
 .. toctree::
    :maxdepth: 1
    
+   Companies
    LaunchSites
    LaunchVehicles
    Missions
@@ -35,6 +36,7 @@ traverse without the need for this documentation:
         "type": "version",
         "id": "1",
         "links": {
+          "companies": "https://www.flightclub.io:8443/FlightClub/api/v1/companies/",
           "launchsites": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/",
           "launchvehicles": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/",
           "payloads": "https://www.flightclub.io:8443/FlightClub/api/v1/payloads/",

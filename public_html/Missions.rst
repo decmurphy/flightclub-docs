@@ -11,6 +11,10 @@ HTTP Method
 
 ``GET https://www.flightclub.io:8443/FlightClub/api/v1/missions/``
 
+``GET https://www.flightclub.io:8443/FlightClub/api/v1/missions/?display=1``
+
+``GET https://www.flightclub.io:8443/FlightClub/api/v1/missions/?company=SPX``
+
 Response
 ========
 
@@ -23,9 +27,10 @@ Response
         "launchsite": "OMLK",
         "description": "FalconSAT-2",
         "launchvehicle": "F1A",
+        "company": "SPX",
         "payload": "SATL",
         "links": {
-          "self": "http://localhost:8080/FlightClub/api/v1/missions/1/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/missions/1/"
         },
         "code": "FSAT"
       },
@@ -34,37 +39,16 @@ Response
         "launchsite": "OMLK",
         "description": "DemoSat",
         "launchvehicle": "F1A",
+        "company": "SPX",
         "payload": "SATL",
         "links": {
-          "self": "http://localhost:8080/FlightClub/api/v1/missions/2/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/missions/2/"
         },
         "code": "DEMO"
-      },
-      {
-        "id": 30,
-        "launchsite": "LC40",
-        "description": "Orbcomm OG2 Mission 2",
-        "launchvehicle": "F92",
-        "payload": "SATL",
-        "links": {
-          "self": "http://localhost:8080/FlightClub/api/v1/missions/30/"
-        },
-        "code": "OG22"
-      },
-      {
-        "id": 26,
-        "launchsite": "LC4E",
-        "description": "Jason-3",
-        "launchvehicle": "F91",
-        "payload": "SATL",
-        "links": {
-          "self": "http://localhost:8080/FlightClub/api/v1/missions/26/"
-        },
-        "code": "JSN3"
       }
     ],
     "links": {
-      "self": "http://localhost:8080/FlightClub/api/v1/missions/"
+      "self": "https://www.flightclub.io:8443/FlightClub/api/v1/missions/"
     }
   }
 
@@ -93,106 +77,125 @@ Response
       "time": "14:21:11",
       "launchsite": "LC40",
       "launchvehicle": "F91",
-      "Profile": {
-        "Payload": {
-          "code": "DRG1",
-          "mass": "6678"
+      "company": "SPX",
+      "display": true,
+      "livelaunch": "c47f2778-2f9f-4284-95c4-1d91431d3e9b",
+      "Payload": {
+        "code": "DRG1",
+        "mass": 6678
+      },
+      "Stages": [
+        {
+          "id": 0,
+          "name": "Booster",
+          "legs": true
         },
-        "Stages": [
-          {
-            "Core": {
-              "id": "0",
-              "legs": "true"
-            },
-            "release": "0",
-            "PitchKick": {
-              "start": "7",
-              "pitch": "2.35",
-              "yaw": "47"
-            },
-            "Burns": [
-              {
-                "tag": "init",
-                "engines": "9",
-                "start": "-2",
-                "end": "160"
-              },
-              {
-                "tag": "boost",
-                "engines": "3",
-                "start": "220",
-                "end": "230"
-              },
-              {
-                "tag": "entry",
-                "engines": "1",
-                "start": "380",
-                "end": "440"
-              },
-              {
-                "tag": "landing",
-                "engines": "1",
-                "start": "460"
-              }
-            ],
-            "Course": [
-              {
-                "tag": "gravturn",
-                "start": "55",
-                "Attitude": {
-                  "gt": "fgt"
-                }
-              },
-              {
-                "tag": "boost",
-                "Attitude": {
-                  "pitch": "-28.5"
-                }
-              },
-              {
-                "tag": "entry",
-                "Attitude": {
-                  "gt": "rgt"
-                }
-              },
-              {
-                "tag": "landing",
-                "Attitude": {
-                  "gt": "rgt"
-                }
-              }
-            ]
-          },
-          {
-            "Core": {
-              "id": "1",
-              "legs": "false"
-            },
-            "release": "162",
-            "Burns": [
-              {
-                "tag": "init",
-                "engines": "1",
-                "start": "165"
-              }
-            ],
-            "Course": [
-              {
-                "tag": "guidance-1",
-                "start": "340",
-                "Attitude": {
-                  "pitch": "0"
-                }
-              }
-            ]
+        {
+          "id": 1,
+          "name": "UpperStage",
+          "legs": false
+        }
+      ],
+      "Events": [
+        {
+          "type": "IGNITION",
+          "stage": 0,
+          "name": "Main Engine Ignition",
+          "engines": 9,
+          "time": -1,
+          "end": null,
+          "dynamic": false,
+          "Attitude": {
+            "pitch": null,
+            "yaw": null,
+            "gt": null,
+            "throttle": null
           }
-        ]
-      }
+        },
+        {
+          "type": "SEPARATION",
+          "stage": 0,
+          "name": "Launch",
+          "engines": null,
+          "time": 0,
+          "end": null,
+          "dynamic": null,
+          "Attitude": {
+            "pitch": null,
+            "yaw": null,
+            "gt": null,
+            "throttle": null
+          }
+        },
+        {
+          "type": "GUIDANCE",
+          "stage": 0,
+          "name": "Pitch Kick",
+          "engines": null,
+          "time": 7,
+          "end": null,
+          "dynamic": null,
+          "Attitude": {
+            "pitch": 86.900001525879,
+            "yaw": 47,
+            "gt": null,
+            "throttle": null
+          }
+        },
+        {
+          "type": "GUIDANCE",
+          "stage": 0,
+          "name": "Gravity Turn",
+          "engines": null,
+          "time": 55,
+          "end": null,
+          "dynamic": null,
+          "Attitude": {
+            "pitch": null,
+            "yaw": null,
+            "gt": "FORWARD",
+            "throttle": null
+          }
+        },
+        {
+          "type": "CUTOFF",
+          "stage": 0,
+          "name": "MECO-1",
+          "engines": 9,
+          "time": 139,
+          "end": null,
+          "dynamic": false,
+          "Attitude": {
+            "pitch": null,
+            "yaw": null,
+            "gt": null,
+            "throttle": null
+          }
+        },
+        {
+          "type": "SEPARATION",
+          "stage": 1,
+          "name": "First Stage Separation",
+          "engines": null,
+          "time": 140,
+          "end": null,
+          "dynamic": null,
+          "Attitude": {
+            "pitch": null,
+            "yaw": null,
+            "gt": null,
+            "throttle": null
+          }
+        }
+      ]
     }
   }
   
 Response Overview
 =================
+  
+All fields required unless marked ``optional``. Some fields only required 
+based on choice of ``Events.type``.
   
 +-----------+---------------+----------------------------------------------------+
 | Element   | Attribute     | Explanation                                        |
@@ -201,76 +204,68 @@ Response Overview
 |           +---------------+----------------------------------------------------+
 |           | description   || Plain text mission name                           |
 |           +---------------+----------------------------------------------------+
-|           | launchvehicle || ``code`` from ``launchvehicles/``                 |
+|           | date          || Date of launch (UTC)                              |
+|           +---------------+----------------------------------------------------+
+|           | time          || Time of launch (UTC)                              |
 |           +---------------+----------------------------------------------------+
 |           | launchsite    || ``code`` from ``launchsites/``                    |
 |           +---------------+----------------------------------------------------+
-|           | dateTime      || Date & time of launch (UTC)                       |
+|           | launchvehicle || ``code`` from ``launchvehicles/``                 |
 |           +---------------+----------------------------------------------------+
-|           | **Profile**   || TODO: Change to ``Vehicle``                       |
-+-----------+---------------+----------------------------------------------------+
-| Profile   | **Payload**   || Object holding Payload info                       |
+|           | company       || ``code`` from ``companies/``                      |
+|           +---------------+----------------------------------------------------+
+|           | display       || boolean value for whether or not to show on client|
+|           +---------------+----------------------------------------------------+
+|           | livelaunch    || ID for simulation to be used for plotting live    |
+|           +---------------+----------------------------------------------------+
+|           | **Payload**   || Object holding Payload info                       |
+|           +---------------+----------------------------------------------------+
+|           | **Stages**    || Array of Stages and their details                 |
+|           +---------------+----------------------------------------------------+
+|           | **Events**    || Array of Events making up the flight profile      |
 +-----------+---------------+----------------------------------------------------+
 | Payload   | code          || ``code`` from ``payloads/``                       |
 |           +---------------+----------------------------------------------------+
 |           | mass          || Mass of payload (kg)                              |
 +-----------+---------------+----------------------------------------------------+
-| Profile   | **Stages**    || Array of stages and their flight profiles         |
+| Stages    | id            || 0-based incremental index                         |
 +-----------+---------------+----------------------------------------------------+
-| Stages    | **Core**      || Core information about a stage                    |
+|           | name          || Name of Stage                                     |
 +-----------+---------------+----------------------------------------------------+
-| Core      | id            || Stage id (integer, zero-based)                    |
-|           +---------------+----------------------------------------------------+
-|           | legs          || Whether or not stage has legs (boolean)           |
+|           | legs          || boolean value - if Stage has legs attached. Legs  |
+|           |               || add extra mass to Stage.                          |
 +-----------+---------------+----------------------------------------------------+
-| Stages    | release       || Time of stage release (T+xxx s). For the first    |
-|           |               || stage, this is launch time. For the higher stages,|
-|           |               || this is the time of separation from the stage     |
-|           |               || below.                                            |
+| Events    | type          || Event type. Can be one of: IGNITION, CUTOFF,      |
+|           |               || SEPARATION, GUIDANCE, FAIRING_SEP, PAYLOAD_SEP    |
 |           +---------------+----------------------------------------------------+
-|           | **PitchKick** || All other values for pitch and yaw are absolute.  |
-|           |               || Pitch-kick values are delta-values.               |
+|           | name          || Plain text description                            |
+|           +---------------+----------------------------------------------------+
+|           | stage         || Links event to stage via ``Stage.id``             |
+|           +---------------+----------------------------------------------------+
+|           | time          || Time (seconds relative to T-0) to begin event     |
+|           +---------------+----------------------------------------------------+
+|           | engines       || (If IGNITION) Number of engines                   |
+|           +---------------+----------------------------------------------------+
+|           | end           || (If GUIDANCE, optional) Time maneouvre should end.|
+|           |               || ``time`` and ``end`` can be used together to      |
+|           |               || manipulate the rate of changing throttle, pitch,  |
+|           |               || yaw, etc. If empty, maneouvre happens as fast as  |
+|           |               || possible.                                         |
+|           +---------------+----------------------------------------------------+
+|           | dynamic       || (If IGNITION, optional) A dynamic burn is a       |
+|           |               || hoverslam. To be used for landing burns. Vastly   |
+|           |               || increases computational time if invoked too early.|
+|           +---------------+----------------------------------------------------+
+|           | **Attitude**  || (If GUIDANCE) If you specify ``pitch`` or ``yaw`` |
+|           |               || here, you **cannot** specify ``gt``, vice versa.  |
 +-----------+---------------+----------------------------------------------------+
-| PitchKick | start         || Start time for pitch-kick (T+xxx s)               |
-|           +---------------+----------------------------------------------------+
-|           | pitch         || Change in pitch (deg)                             |
-|           +---------------+----------------------------------------------------+
-|           | yaw           || Change in yaw (deg)                               |
+| Attitude  | pitch         || (optional) Target pitch (degrees)                 |
 +-----------+---------------+----------------------------------------------------+
-| Stages    | **Burns**     || Array of burns executed in flight profile         |
-+-----------+---------------+----------------------------------------------------+
-| Burns     | tag           || Plain-text identifier                             |
+|           | yaw           || (optional) Target yaw (degrees)                   |
 |           +---------------+----------------------------------------------------+
-|           | start         || Start time (T+xxx s)                              |
+|           | gt            || (optional) Set target heading to be a Gravity     |
+|           |               || Turn. Can be one of: FORWARD, REVERSE             |
 |           +---------------+----------------------------------------------------+
-|           | end           || (optional) End time (T+xxx s). If omitted, stage  |
-|           |               || burns until crash/no fuel.                        |
-|           +---------------+----------------------------------------------------+
-|           | engines       || Number of engines used in burn (int)              |
-|           +---------------+----------------------------------------------------+
-|           | throttle      || Engine throttle during burn (t_min<=t<=1). t_min  |
-|           |               || determined by engines on chosen launch vehicle    |
-+-----------+---------------+----------------------------------------------------+
-| Stages    | **Course**    || Array of course corrections in flight profile     |
-+-----------+---------------+----------------------------------------------------+
-| Course    | tag           || (optional) Plain-text identifier. If ``start`` is |
-|           |               || empty and this matches a Burn ``tag``, the Burn's |
-|           |               || start time will be used for this correction.      |
-|           +---------------+----------------------------------------------------+
-|           | start         || (optional if tag included) Start time (T+xxx s)   |
-|           +---------------+----------------------------------------------------+
-|           | end           || (optional) End time (T+xxx s)                     |
-|           +---------------+----------------------------------------------------+
-|           | **Attitude**  || If you specify ``pitch`` or ``yaw`` here, you     |
-|           |               || **cannot** specify ``gt``, and vice versa.        |
-+-----------+---------------+----------------------------------------------------+
-| Attitude  | pitch         || (optional) Pitch param (degrees)                  |
-+-----------+---------------+----------------------------------------------------+
-|           | yaw           || (optional) Yaw param (degrees)                    |
-|           +---------------+----------------------------------------------------+
-|           | gt            || (optional) Gravity Turn can be "fgt","rgt"        |
-|           |               || TODO: Change to "FORWARD"/"REVERSE"               |
-|           +---------------+----------------------------------------------------+
-|           | throttle      || (optional) Throttle param t, t_min<=t<=1. t_min   |
-|           |               || specified by launch vehicle's engines             |
+|           | throttle      || (optional) Target throttle t: t_min<=t<=1. t_min  |
+|           |               || specified by launch vehicle's engines.            |
 +-----------+---------------+----------------------------------------------------+

@@ -12,59 +12,38 @@ Response
 .. code-block:: json
 
   {
+    "links": {
+      "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/"
+    },
     "data": [
       {
-        "id": 1,
-        "code": "F1A",
-        "description": "Falcon 1 (Merlin 1A)",
+        "id": 7,
+        "code": "NSH",
+        "description": "New Shepard",
+        "stages": 1,
         "links": {
-          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/1/"
-        }
-      },
-      {
-        "id": 2,
-        "code": "F1C",
-        "description": "Falcon 1 (Merlin 1C)",
-        "links": {
-          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/2/"
-        }
-      },
-      {
-        "id": 3,
-        "code": "FN9",
-        "description": "Falcon 9v1.0",
-        "links": {
-          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/3/"
-        }
-      },
-      {
-        "id": 4,
-        "code": "F91",
-        "description": "Falcon 9v1.1",
-        "links": {
-          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/4/"
-        }
-      },
-      {
-        "id": 5,
-        "code": "F92",
-        "description": "Falcon 9v1.2",
-        "links": {
-          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/5/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/7/"
         }
       },
       {
         "id": 6,
         "code": "FNH",
         "description": "Falcon Heavy",
+        "stages": 3,
         "links": {
           "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/6/"
         }
+      },
+      {
+        "id": 5,
+        "code": "F92",
+        "description": "Falcon 9v1.1 FT",
+        "stages": 2,
+        "links": {
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/5/"
+        }
       }
-    ],
-    "links": {
-      "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/"
-    }
+    ]
   }
   
 Response Overview
@@ -78,6 +57,8 @@ Response Overview
 |              | code        | Constant enum identifier                     |
 |              +-------------+----------------------------------------------+
 |              | description | Plain text description                       |
+|              +-------------+----------------------------------------------+
+|              | stages      | Number of stages in this vehicle             |
 |              +-------------+----------------------------------------------+
 |              | **links**   |                                              |
 +--------------+-------------+----------------------------------------------+

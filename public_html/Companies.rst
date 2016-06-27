@@ -1,10 +1,10 @@
-LaunchSites
-###########
+Companies
+#################
 
 HTTP Method
 ===========
 
-``GET https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/``
+``GET https://www.flightclub.io:8443/FlightClub/api/v1/companies/``
 
 Response
 ========
@@ -13,17 +13,15 @@ Response
 
   {
     "links": {
-      "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/"
+      "self": "https://www.flightclub.io:8443/FlightClub/api/v1/companies/"
     },
     "data": [
       {
-        "id": 4,
-        "code": "K39A",
-        "description": "LC-39A, Kennedy Space Center",
-        "latitude": 28.61,
-        "longitude": -80.6,
+        "id": 3,
+        "code": "ULA",
+        "description": "United Launch Alliance",
         "links": {
-          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/4/"
+          "self": "https://www.flightclub.io:8443/FlightClub/api/v1/companies/3/"
         }
       }
     ]
@@ -40,10 +38,6 @@ Response Overview
 |              | code        | Constant enum identifier                     |
 |              +-------------+----------------------------------------------+
 |              | description | Plain text description                       |
-|              +-------------+----------------------------------------------+
-|              | latitude    | Launch site latitude                         |
-|              +-------------+----------------------------------------------+
-|              | longitude   | Launch site longitude                        |
 |              +-------------+----------------------------------------------+
 |              | **links**   |                                              |
 +--------------+-------------+----------------------------------------------+
