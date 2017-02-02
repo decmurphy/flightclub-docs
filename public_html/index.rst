@@ -7,11 +7,11 @@ Contents:
    :maxdepth: 1
    
    Companies
+   Engines
    LaunchSites
-   LaunchVehicles
    Missions
-   Payloads
    Simulator
+   Stages
 
 All requests to the FlightClub API must be sent to the endpoint root
 
@@ -30,23 +30,21 @@ traverse without the need for this documentation:
   
 .. code-block :: json
   
-  {
-    "data": [
-      {
+    {
+      "links": {
+        "self": "https://www.flightclub.io:8443/FlightClub/api/v1/"
+      },
+      "data": {
         "type": "version",
         "id": "1",
         "links": {
           "companies": "https://www.flightclub.io:8443/FlightClub/api/v1/companies/",
+          "engines": "https://www.flightclub.io:8443/FlightClub/api/v1/engines/",
           "launchsites": "https://www.flightclub.io:8443/FlightClub/api/v1/launchsites/",
-          "launchvehicles": "https://www.flightclub.io:8443/FlightClub/api/v1/launchvehicles/",
-          "payloads": "https://www.flightclub.io:8443/FlightClub/api/v1/payloads/",
-          "missions": "https://www.flightclub.io:8443/FlightClub/api/v1/missions/"
+          "missions": "https://www.flightclub.io:8443/FlightClub/api/v1/missions/",
+          "stages": "https://www.flightclub.io:8443/FlightClub/api/v1/stages/"
         }
       }
-    ],
-    "links": {
-      "self": "https://www.flightclub.io:8443/FlightClub/api/v1/"
     }
-  }
 
 Good luck!
